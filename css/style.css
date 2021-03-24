@@ -1,0 +1,62 @@
+@import 'reset.css';
+@import 'header.css';
+@import 'footer.css';
+
+/* FONT */
+@font-face{
+  font-family: 'NanumSquareL';
+  src: url('../font/NanumSquareL.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'NanumSquare';
+  src: url('../font/NanumSquareR.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'NanumSquareB';
+  src: url('../font/NanumSquareB.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'NanumSquareEB';
+  src: url('../font/NanumSquareEB.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+  --primaryColor: #5D66F5;
+  --secondaryColor: #000;
+  --animate-duration: 1200ms;
+}
+/* ::selection{
+  
+} */
+
+body{
+  background-color: #fff;
+  color: #000;
+  font-family: 'NanumSquare', sans-serif;
+  line-height: 1.1;
+}
+.inner{
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1140px;
+  height: 100%;
+}
+section{
+  margin-top: 80px;
+}
+h2{
+  font-family: 'NanumSquareEB';
+  font-size: 48px;
+  letter-spacing: -0.3px;
+}
+h2 span{
+  color: var(--primaryColor);
+}
