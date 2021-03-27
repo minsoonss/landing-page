@@ -2,8 +2,10 @@ const $scroll = $('html, body');
 var num = 0;
 
 function menuSlide(){
-  $('.menu').slideToggle()
-}
+  $('.menuBtn').toggleClass('on');
+  $('.menu').toggle();
+  $('.bgShadow').toggle();
+};
 
 $(function(){
   /*MENU*/

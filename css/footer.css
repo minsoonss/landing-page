@@ -68,11 +68,13 @@ footer{
 @media screen and (max-width: 768px){
   footer{
     position: relative;
-    height: 370px;
+    height: auto;
     margin-bottom: 60px;
+    padding: 40px 0;
     font-size: 14px;
   }
   .footerTop{
+    margin-top: 0;
     padding-bottom: 16px;
     border-bottom: none;
     line-height: 1.5;
