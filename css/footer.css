@@ -1,0 +1,128 @@
+/* 데스크탑 세팅 */
+footer{
+  height: 250px;
+  font-size: 14px;
+  background-color: #313131;
+}
+.footerTop{
+  overflow: hidden;
+  margin-top: 40px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #888;
+  color: #fff;
+  line-height: 32px;
+}
+.footerTop .footerLink{
+  float: left;
+}
+.footerTop .footerLink span{
+  display: block;
+  float: left;
+  margin-right: 10px;
+  color: var(--primaryColor);
+  font-family: 'NanumSquareEB';
+}
+.footerTop .footerLink a{
+  display: block;
+  float: right;
+  font-family: 'NanumSquareB';
+  font-size: 32px;
+}
+.footerTop .footerInfor{
+  float: right;
+}
+.footerTop .footerInfor ul{
+  display: flex;
+  float: left;
+}
+.footerTop .footerInfor ul li{
+  position: relative;
+  margin-right: 20px;
+}
+.footerTop .footerInfor ul li::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: -10px;
+  width: 0.5px;
+  height: 14px;
+  background-color: #888;
+}
+.footerTop .footerInfor address{
+  float: right;
+}
+.footerBtm{
+  overflow: hidden;
+  margin-top: 15px;
+  color: #888;
+}
+.footerBtm .ban{
+  float: left;
+}
+.footerBtm .copy{
+  float: right;
+}
+
+/* 모바일 세팅 */
+@media screen and (max-width: 768px){
+  footer{
+    position: relative;
+    height: 240px;
+    margin-bottom: 60px;
+    font-size: 10px;
+  }
+  .footerTop{
+    padding-bottom: 0;
+    border-bottom: none;
+    line-height: 1.1;
+  }
+  .footerTop .footerLink{
+    float: none;
+  }
+  .footerTop .footerLink span{
+    float: none;
+    font-size: 11px;
+  }
+  .footerTop .footerLink a{
+    float: none;
+    font-size: 23px;
+    line-height: 1.8;
+  }
+  .footerTop .footerInfor{
+    float: none;
+    margin-top: 5px;
+    padding-top: 10px;
+    border-top: 1px solid #888;
+    line-height: 2;
+  }
+  .footerTop .footerInfor ul{
+    display: flex;
+    justify-content: space-between;
+    float: none;
+  }
+  .footerTop .footerInfor ul li{
+    margin-right: 0;
+  }
+  .footerTop .footerInfor ul li::after{
+    top: 5px;
+    right: -10px;
+    height: 10px;
+  }
+  .footerTop .footerInfor address{
+    float: none;
+    white-space: pre-wrap;
+  }
+  .footerBtm .ban{
+    position: absolute;
+    right: 5%;
+    top: 60px;
+    float: none;
+    width: 165px;
+    line-height: 1.2;
+    white-space: pre-wrap;
+  }
+  .footerBtm .copy{
+    float: none;
+  }
+}

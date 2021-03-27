@@ -1,0 +1,301 @@
+/*CONTAINER*/
+.container{
+  overflow: hidden;
+  height: calc(100vh - 80px);
+}
+.container .txtBox{
+  margin-top: 120px;
+  text-align: center;
+}
+.container .txtBox p{
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.container .txtBox p span{
+  color: #FF4040;
+}
+.container form{
+  margin: 70px auto 0;
+  width: 610px;
+}
+.container form .accountBox,
+.container form .telBox{
+  float: left;
+  width: 300px;
+  height: 50px;
+  border: 1px solid #DEE2E6;
+}
+.container form .telBox{
+  float: right;
+}
+.container form .accountBox label,
+.container form .telBox label{
+  padding-left: 15px;
+  line-height: 48px;
+}
+.container form .accountBox label span,
+.container form .telBox label span{
+  color: #FF4040;
+}
+.container form .accountBox input,
+.container form .telBox input{
+  float: right;
+  height: 48px;
+  outline: none;
+  border: none;
+  color: #000;
+  font-family: 'NanumSquare';
+  font-size: 16px;
+  line-height: 48px;
+}
+.container form .accountBox input{
+  width: 188px;
+}
+.container form .telBox input{
+  width: 217px;
+}
+::-webkit-input-placeholder{
+  color: #ccc;
+  line-height: 48px;
+}
+:-moz-placeholder{
+  color: #ccc;
+  line-height: 48px;
+}
+::-moz-placeholder{
+  color: #ccc;
+  line-height: 48px;
+}
+:-ms-input-placeholder{
+  color: #ccc;
+  line-height: 48px;
+}
+.container form .questionBox{
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #DEE2E6;
+}
+.container form .questionBox label{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #DEE2E6;
+  text-indent: 15px;
+  line-height: 50px;
+}
+.container form .questionBox textarea{
+  display: block;
+  padding: 15px;
+  width: 100%;
+  height: 150px;
+  white-space: pre-wrap;
+  outline: none;
+  border: none;
+  resize: none;
+  color: #000;
+  font-family: 'NanumSquare';
+  font-size: 16px;
+  line-height: 1.1;
+}
+.container form .questionBox textarea::-webkit-input-placeholder{
+  line-height: 1.1;
+}
+.container form .questionBox textarea:-moz-placeholder{
+  line-height: 1.1;
+}
+.container form .questionBox textarea::-moz-placeholder{
+  line-height: 1.1;
+}
+.container form .questionBox textarea:-ms-input-placeholder{
+  line-height: 1.1;
+}
+.container form .privacyBox{
+  display: block;
+  float: left;
+  margin: 60px auto 0;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.container form .privacyBox label{
+  cursor: pointer;
+  display: inline-block;
+}
+.container form .privacyBox label::before{
+  content: '';
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/icon_check.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+.container form .privacyBox label:hover::before{
+  background-position: -20px 0;
+}
+.container form .privacyBox label.on::before{
+  background-position: -40px 0;
+}
+.container form .privacyBox label.on:hover::before{
+  background-position: -60px 0;
+}
+.container form .privacyBox label input{
+  display: none;
+}
+.container form .btnBox{
+  position: relative;
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+.container form .btnBox .inquiryBtn{
+  opacity: 0.9;
+  width: 160px;
+  height: 50px;
+  background-color: var(--primaryColor);
+  color: #fff;
+  font-family: 'NanumSquareB';
+  font-size: 20px;
+}
+.container form .btnBox .inquiryBtn:hover{
+  opacity: 1;
+}
+.container form .btnBox .inquiryBtn:disabled{
+  cursor: no-drop;
+  opacity: 1;
+  background-color: #999;
+}
+.container form .btnBox .warning{
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  color: #FF4040;
+}
+.container form .btnBox .inquiryBtn:enabled:hover + .warning{
+  display: block;
+}
+
+/*privacyPopup*/
+.privacyPopup{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(43, 43, 43, 0.9);
+}
+.privacyPopup .content{
+  margin: 20vh auto;
+  width: 700px;
+  height: 60vh;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.privacyPopup .content .contentTop{
+  height: 60px;
+  border-bottom: 1px solid #DEE2E6;
+  line-height: 60px;
+}
+.privacyPopup .content .contentTop h3{
+  float: left;
+  margin-left: 20px;
+  font-family: 'NanumSquareB';
+  font-size: 20px;
+}
+.privacyPopup .content .contentTop .closeBtn{
+  overflow: hidden;
+  float: right;
+  margin-right: 5px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/icon_close.svg);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  font-size: 30px;
+  text-indent: -999em;
+}
+.privacyPopup .content .contentBtm{
+  padding: 20px;
+  height: calc(60vh - 60px);
+  text-align: center;
+}
+.privacyPopup .content .contentBtm p{
+  overflow-y: scroll;
+  height: calc(60vh - 170px);
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.4;
+  white-space: normal;
+}
+.privacyPopup .content .contentBtm p::-webkit-scrollbar{
+  display: none;
+}
+.privacyPopup .content .contentBtm .checkBtn{
+  opacity: 0.9;
+  margin-top: 20px;
+  width: 160px;
+  height: 50px;
+  background-color: var(--primaryColor);
+  color: #fff;
+  font-family: 'NanumSquareB';
+  font-size: 20px;
+}
+
+/*thanksPopup*/
+.thanksPopup{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(43, 43, 43, 0.9);
+}
+.thanksPopup .content{
+  position: relative;
+  margin: 0 auto;
+  margin-top: calc(50vh - 108.5px);
+  padding: 60px 0;
+  width: 700px;
+  color: #fff;
+  text-align: center;
+}
+.thanksPopup .content h3{
+  font-family: 'NanumSquareEB';
+  font-size: 50px;
+}
+.thanksPopup .content h3 span{
+  color: var(--primaryColor);
+}
+.thanksPopup .content p{
+  margin-top: 20px;
+  font-size: 20px;
+}
+.thanksPopup .content .closeBtn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/icon_close.svg);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  font-size: 30px;
+  text-indent: -999em;
+}
