@@ -50,7 +50,6 @@ table{
 /* CUSTOMIZE */
 *{
   box-sizing: border-box;
-  white-space: nowrap;
 }
 a{
   color: inherit;

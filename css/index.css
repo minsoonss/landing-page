@@ -445,7 +445,7 @@ article{
 
 
 /* 모바일 세팅 */
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 768px){
   /*ALL*/
   article{
     scroll-margin-top: 60px;

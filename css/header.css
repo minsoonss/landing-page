@@ -71,7 +71,7 @@ h1.logo a{
   header{
     height: 60px;
     background-color: #fff;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: none;
     color: #000;
   }
@@ -129,7 +129,7 @@ h1.logo a{
     -webkit-background-size: 0;
     background-size: 0;
     background-position: 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     color: #fff;
     font-size: 20px;
     text-align: center;
