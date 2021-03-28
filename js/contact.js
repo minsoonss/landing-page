@@ -1,3 +1,9 @@
+function menuSlide(){
+  $('.menuBtn').toggleClass('on');
+  $('.menu').toggle();
+  $('.bgShadow').toggle();
+};
+
 function privacyPopupOpen(){
   if(!$('.privacyBox label').hasClass('on')){
     $('.privacyBox label').addClass('on');

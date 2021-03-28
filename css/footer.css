@@ -71,11 +71,11 @@ footer{
     height: auto;
     margin-bottom: 60px;
     padding: 40px 0;
-    font-size: 14px;
+    font-size: 12px;
   }
   .footerTop{
     margin-top: 0;
-    padding-bottom: 16px;
+    padding-bottom: 0;
     border-bottom: none;
     line-height: 1.5;
   }
@@ -109,27 +109,21 @@ footer{
     line-height: 2;
   }
   .footerTop .footerInfor ul{
-    display: block;
+    justify-content: center;
     float: none;
   }
-  .footerTop .footerInfor ul li{
+  .footerTop .footerInfor ul li:last-child{
     margin-right: 0;
   }
   .footerTop .footerInfor ul li::after{
+    top: 6px;
+    height: 12px;
+  }
+  .footerTop .footerInfor ul li:last-child::after{
     display: none;
   }
   .footerTop .footerInfor address{
     float: none;
-  }
-  .footerTop .footerInfor::after{
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -15px;
-    left: 40%;
-    width: 20%;
-    height: 0.5px;
-    background-color: #888;
   }
   .footerBtm{
     margin-top: 15px;
