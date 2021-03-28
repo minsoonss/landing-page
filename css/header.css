@@ -120,7 +120,7 @@ h1.logo a{
   .lnb .kakao{
     display: block;
     position: fixed;
-    top: 230px;
+    bottom: calc(100vh - 310px);
     left: 25%;
     margin-top: 0px;
     width: 50%;
@@ -140,7 +140,7 @@ h1.logo a{
     transition: all 0.4s ease-in-out;
   }
   .lnb .kakao.fixedOn{
-    top: calc(100vh - 60px);
+    bottom: 0;
     left: 0;
     z-index: 888;
     width: 100%;

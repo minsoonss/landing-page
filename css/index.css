@@ -454,11 +454,11 @@ article{
 
   /*VISUAL*/
   .visual{
-    height: auto;
+    height: calc(100vh - 60px);
     background-image: none;
   }
   .visual .txtBox{
-    margin-top: 40px;
+    margin-top: 60px;
   }
   .visual .txtBox p{
     font-size: 20px;
@@ -467,14 +467,14 @@ article{
     font-size: 28px;
   }
   .visual .imgBox{
-    position: static;
-    margin-top: 150px;
-    height: auto;
+    top: 370px;
+    height: calc(100vh - 370px);
+    background-image: url(../images/visual_smartphone.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -10% 0;
   }
   .visual .imgBox img.smartphone{
-    position: static;
-    float: left;
-    margin-left: 10%;
-    width: 140%;
+    display: none;
   }
 }
