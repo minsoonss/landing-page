@@ -454,7 +454,7 @@ article{
 
   /*VISUAL*/
   .visual{
-    height: calc(100vh - 60px);
+    height: auto;
     background-image: none;
   }
   .visual .txtBox{
@@ -467,14 +467,13 @@ article{
     font-size: 28px;
   }
   .visual .imgBox{
-    top: 370px;
-    height: calc(100vh - 370px);
-    background-image: url(../images/visual_smartphone.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: -10% 0;
+    position: static;
+    margin-top: 160px;
+    height: auto;
   }
   .visual .imgBox img.smartphone{
-    display: none;
+    position: static;
+    margin-left: 10%;
+    width: 140%;
   }
 }
