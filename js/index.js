@@ -4,8 +4,11 @@ function menuSlide(){
   $('.menuBtn').toggleClass('on');
   $('.menu').toggle();
   $('.bgShadow').toggle();
-  if($(window).scrollTop() <= 0){
-    $('.kakao').toggleClass('fixedOn')
+  if(!$('.kakao').hasClass('fixedOn')){
+    $('.kakao').addClass('fixedOn')
+    $('.kakao').css({transition: 'none'})
+  }else if($(window).scrollTop() == 0){
+    $('.kakao').removeClass('fixedOn')
     $('.kakao').css({transition: 'none'})
   }
 };
@@ -27,7 +30,7 @@ $(function(){
       $('.visual .txtBox').removeClass('wow fadeIn');
       $('.smartphone').removeClass('wow slideInRight');
     }
-    if(windowWidth >= 768 && $(window).scrollTop() > 0){
+    if(windowWidth <= 768 && $(window).scrollTop() > 0){
       $('.kakao').addClass('fixedOn');
       $('.kakao').css({transition: 'none'})
     }
@@ -62,10 +65,10 @@ $(function(){
     if(scrollNum >= 500){
       $circle.animate({'stroke-dashoffset': '32.5px'}, 1200);
     };
-    if(scrollNum > 0){
+    if(scrollNum > 0 && !$('.menuBtn').hasClass('on')){
       $('.kakao').addClass('fixedOn');
       $('.kakao').css({transition: 'all 0.4s ease-in-out'})
-    }else{
+    }else if(scrollNum == 0 && !$('.menuBtn').hasClass('on')){
       $('.kakao').removeClass('fixedOn')
     }
   });
