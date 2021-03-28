@@ -1,3 +1,4 @@
+/* 데스크탖 세팅 */
 /*ALL*/
 article{
   scroll-margin-top: 80px;
@@ -449,5 +450,29 @@ article{
   /*ALL*/
   article{
     scroll-margin-top: 60px;
+  }
+
+  /*VISUAL*/
+  .visual{
+    height: calc(100vh - 60px);
+    background-image: none;
+  }
+  .visual .txtBox{
+    margin-top: 60px;
+  }
+  .visual .txtBox p{
+    font-size: 20px;
+  }
+  .visual .txtBox h2{
+    font-size: 28px;
+  }
+  .visual .imgBox{
+    top: 400px;
+    height: calc(100% - 400px);
+  }
+  .visual .imgBox img.smartphone{
+    top: 0;
+    left: 5%;
+    width: 150%;
   }
 }
