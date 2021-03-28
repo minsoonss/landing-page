@@ -16,14 +16,16 @@ $(function(){
 
   /*모바일 초기값*/
   function mobileInit(){
-    $('.visual .txtBox').removeClass('wow fadeIn');
-    $('.smartphone').removeClass('wow slideInRight');
     if(windowWidth >= 768){
       scrollMT = 80;
       $('.kakao').text('카카오톡 상담');
+      $('.visual .txtBox').addClass('wow fadeIn');
+      $('.smartphone').addClass('wow slideInRight');
     }else{
       scrollMT = 60;
       $('.kakao').text('바로 상담하기');
+      $('.visual .txtBox').removeClass('wow fadeIn');
+      $('.smartphone').removeClass('wow slideInRight');
     }
     if(windowWidth >= 768 && $(window).scrollTop() > 0){
       $('.kakao').addClass('fixedOn');
