@@ -408,15 +408,15 @@
 
   /*privacyPopup*/
   .privacyPopup .content{
-    margin: 5vh auto;
+    margin: 10vh auto;
     width: 85vw;
-    height: 90vh;
+    height: 80vh;
   }
   .privacyPopup .content .contentBtm{
-    height: calc(90vh - 60px);
+    height: calc(80vh - 60px);
   }
   .privacyPopup .content .contentBtm p{
-    height: calc(90vh - 170px);
+    height: calc(80vh - 170px);
     font-size: 12px;
   }
   .privacyPopup .content .contentBtm .checkBtn{
