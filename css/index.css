@@ -473,4 +473,139 @@ article{
     margin-left: 10%;
     width: 140%;
   }
+
+  /*INSTA*/
+  .insta{
+    padding: 50px 0;
+    height: auto;
+  }
+  .insta .txtBox{
+    float: none;
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .insta .txtBox p:first-child{
+    font-size: 22px;
+    line-height: 1.3;
+  }
+  .insta .txtBox p:last-child{
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .insta .imgBox{
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+  .insta .imgBox .graph{
+    position: absolute;
+    top: -155px;
+  }
+
+  /*SECRET*/
+  .secret{
+    height: auto;
+    padding: 80px 0;
+  }
+  .secret .inner{
+    margin-top: 0;
+  }
+  .secret .txtBox{
+    margin-bottom: 50px;
+  }
+  .secret .txtBox p{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .secret ul{
+    display: block;
+  }
+  .secret ul li{
+    margin-bottom: 50px;
+  }
+  .secret ul li:last-child{
+    margin-bottom: 0;
+  }
+  .secret ul li .number{
+    display: none;
+  }
+  .secret ul li .caption{
+    margin-top: 10px;
+    font-family: 'NanumSquareB';/*뺄까?*/
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  /*FAQ*/
+  .faq{
+    height: auto;
+  }
+  .faq .inner{
+    position: relative;
+    width: 100%;
+  }
+  .faq .txtBox{
+    top: 50px;
+  }
+  .faq .txtBox p{
+    font-size: 16px;
+  }
+  .faq .txtBox h2{
+    font-size: 28px;
+  }
+  .faq .swiper-container{
+    padding-bottom: 95px;
+  }
+  .faq .swiper-container .swiper-wrapper .swiper-slide h3{
+    margin-top: 140px;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  .faq .swiper-container .swiper-wrapper .swiper-slide p{
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .faq .swiper-container .swiper-wrapper .swiper-slide:not(:first-child) h3{
+    margin-top: 140px;
+  }
+  .faq .swiper-container .swiper-button-next,
+  .faq .swiper-container .swiper-button-prev{
+    display: none;
+  }
+  .faq .swiper-container .swiper-pagination{
+    bottom: 45px;
+  }
+
+  /*CONTACT*/
+  .contact{
+    height: auto;
+    padding: 80px 0;
+  }
+  .contact .txtBox{
+    margin-top: 0;
+  }
+  .contact .txtBox h2{
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  .contact .txtBox p{
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .contact .txtBox .linkBox{
+    margin-top: 50px;
+  }
+  .contact .txtBox .linkBox a{
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .contact .txtBox .linkBox a:first-child{
+    margin-right: 20px;
+  }
 }

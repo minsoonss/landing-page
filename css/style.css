@@ -69,6 +69,9 @@ h2 span{
   .inner{
     width: 90%;
   }
+  .br{
+    display: block;
+  }
   section{
     margin-top: 60px;
   }

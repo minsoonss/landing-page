@@ -75,10 +75,14 @@ h1.logo a{
     box-shadow: none;
     color: #000;
   }
+  header .inner{
+    width: 100%;
+  }
   h1.logo a{
     margin-top: 15px;
+    margin-left: 5%;
     padding-left: 34px;
-    background-image: url(../images/simbol.svg);
+    background-image: url(../images/simbol_mobile.svg);
     color:  var(--primaryColor);
     font-size: 24px;
     line-height: 30px;
@@ -88,10 +92,12 @@ h1.logo a{
     width: 60px;
     height: 60px;
     text-indent: -999em;
-    background-color: red;
+    background-image: url(../images/hambuger_menu.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .lnb .menuBtn.on{
-    background-color: orange;
+    background-image: url(../images/hambuger_close.svg);
   }
   .lnb .menu{
     display: none;

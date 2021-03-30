@@ -5,12 +5,12 @@ function menuSlide(){
   $('.menu').toggle();
   $('.bgShadow').toggle();
   if(!$('.kakao').hasClass('fixedOn')){
-    $('.kakao').addClass('fixedOn')
-    $('.kakao').css({transition: 'none'})
+    $('.kakao').addClass('fixedOn');
+    $('.kakao').css({transition: 'none'});
   }else if($(window).scrollTop() == 0){
-    $('.kakao').removeClass('fixedOn')
-    $('.kakao').css({transition: 'none'})
-  }
+    $('.kakao').removeClass('fixedOn');
+    $('.kakao').css({transition: 'none'});
+  };
 };
 
 $(function(){
@@ -29,12 +29,12 @@ $(function(){
       $('.kakao').text('바로 상담하기');
       $('.visual .txtBox').removeClass('wow fadeIn');
       $('.smartphone').removeClass('wow slideInRight');
-    }
+    };
     if(windowWidth <= 768 && $(window).scrollTop() > 0){
       $('.kakao').addClass('fixedOn');
-      $('.kakao').css({transition: 'none'})
-    }
-  }
+      $('.kakao').css({transition: 'none'});
+    };
+  };
 
   mobileInit();
 
@@ -47,21 +47,20 @@ $(function(){
     }else{
       scrollMT = 60;
       $('.kakao').text('바로 상담하기');
-    }
-  })
+    };
+  });
 
   /*MENU*/
   $('.menu li:not(:last-child) a').click(function(){
     const menuMove = $(this).attr('href');
     const scrollValue = $(menuMove).offset().top;
-    $scroll.stop().animate({'scrollTop': `${scrollValue - scrollMT}px`}, 1000)
+    $scroll.stop().animate({'scrollTop': `${scrollValue - scrollMT}px`}, 1000);
   });
   
   /*GRAPH*/
   $(window).scroll(function(){
     const scrollNum = $(this).scrollTop();
     const $circle = $('.insta .imgBox .graph svg circle');
-    console.log(scrollNum)
     if(scrollNum >= 500){
       $circle.animate({'stroke-dashoffset': '32.5px'}, 1200);
     };
@@ -69,8 +68,8 @@ $(function(){
       $('.kakao').addClass('fixedOn');
       $('.kakao').css({transition: 'all 0.4s ease-in-out'})
     }else if(scrollNum == 0 && !$('.menuBtn').hasClass('on')){
-      $('.kakao').removeClass('fixedOn')
-    }
+      $('.kakao').removeClass('fixedOn');
+    };
   });
   
   /*SWIPER*/
