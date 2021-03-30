@@ -545,7 +545,7 @@ article{
     background-image: url(../images/service_background_mobile.png);
   }
   .service .serviceIntro{
-    height: 100vh;
+    height: auto;
   }
   .service .serviceIntro .txtBox{
     margin-top: 80px;
@@ -558,21 +558,31 @@ article{
     line-height: 1.5;
   }
   .service .serviceIntro .imgBox{
+    position: static;
     width: 100%;
   }
   .service .serviceIntro .imgBox .phone{
+    position: static;
     left: 0;
     top: 30px;
     width: 100%;
   }
   .service .serviceIntro .imgBox .graph1{
+    position: static;
+    float: right;
+    margin-top: -90%;
+    margin-right: 17.5%;
     width: 35%;
   }
   .service .serviceIntro .imgBox .graph2{
+    position: static;
+    float: right;
+    margin-top: -77.5%;
+    margin-right: 0;
     width: 40%;
   }
   .service .serviceSummary{
-    padding: 100px 0 150px;
+    padding: 100px 0;
     height: auto;
   }
   .service .serviceSummary h3,
