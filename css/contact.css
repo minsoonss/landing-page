@@ -1,4 +1,4 @@
-
+/* 데스크탑 세팅 */
 /*CONTAINER*/
 .container{
   overflow: hidden;
@@ -237,7 +237,7 @@
   overflow-y: scroll;
   height: calc(60vh - 170px);
   font-size: 14px;
-  text-align: left;
+  text-align: justify;
   line-height: 1.4;
   white-space: normal;
 }
@@ -299,4 +299,146 @@
   background-position: center;
   font-size: 30px;
   text-indent: -999em;
+}
+
+/* 모바일 세팅 */
+@media screen and (max-width: 768px){
+  /*OTHER PAGE*/
+  .lnb .kakao{
+    display: none;
+  }
+  footer{
+    margin-bottom: 0;
+  }
+
+  /*CONTAINER*/
+  .container{
+    padding: 80px 0 100px;
+    height: auto;
+  }
+  .container .txtBox{
+    margin-top: 0;
+  }
+  .container .txtBox p{
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .container form{
+    margin: 50px auto 0;
+    width: 95%;
+    text-align: left;
+  }
+  .container form .accountBox,
+  .container form .telBox{
+    float: none;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+  .container form .accountBox label,
+  .container form .telBox label{
+    display: block;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .container form .accountBox input,
+  .container form .telBox input{
+    float: none;
+    padding: 0 10px;
+    width: 100%;
+    border: 1px solid #DEE2E6;
+  }
+  .container form .questionBox{
+    float: none;
+    margin-top: 0;
+    border: none;
+  }
+  .container form .questionBox label{
+    height: auto;
+    border-bottom: none;
+    font-size: 14px;
+    text-indent: 0;
+    line-height: 30px;
+  }
+  .container form .questionBox textarea{
+    padding: 10 15px;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #DEE2E6;
+  }
+  .container form .privacyBox{
+    float: none;
+    margin: 20px 0 0;
+    height: 20px;
+    text-align: inherit;
+    line-height: 20px;
+  }
+  .container form .privacyBox label{
+    font-size: 14px;
+  }
+  .container form .privacyBox label::before{
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+  }
+  .container form .privacyBox label:hover::before{
+    background-position: -16px 0;
+  }
+  .container form .privacyBox label.on::before{
+    background-position: -32px 0;
+  }
+  .container form .privacyBox label.on:hover::before{
+    background-position: -48px 0;
+  }
+  .container form .btnBox{
+    float: none;
+    margin-top: 25px;
+  }
+  .container form .btnBox .inquiryBtn{
+    width: 100%;
+    font-size: 18px;
+  }
+  .container form .btnBox .inquiryBtn:enabled:hover + .warning{
+    display: none;
+  }
+
+  /*privacyPopup*/
+  .privacyPopup .content{
+    margin: 5vh auto;
+    width: 85vw;
+    height: 90vh;
+  }
+  .privacyPopup .content .contentBtm{
+    height: calc(90vh - 60px);
+  }
+  .privacyPopup .content .contentBtm p{
+    height: calc(90vh - 170px);
+    font-size: 12px;
+  }
+  .privacyPopup .content .contentBtm .checkBtn{
+    width: 100%;
+    font-size: 18px;
+  }
+
+  /*thanksPopup*/
+  .thanksPopup .content{
+    margin-top: calc(50vh - 29.5px);
+    padding: 0;
+    width: 90%;
+  }
+  .thanksPopup .content h3{
+    font-size: 28px;
+  }
+  .thanksPopup .content p{
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .thanksPopup .content .closeBtn{
+    display: none;
+  }
 }

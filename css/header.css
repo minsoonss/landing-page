@@ -79,13 +79,13 @@ h1.logo a{
     width: 100%;
   }
   h1.logo a{
-    margin-top: 15px;
+    margin-top: 17px;
     margin-left: 5%;
-    padding-left: 34px;
+    padding-left: 28px;
     background-image: url(../images/simbol_mobile.svg);
     color:  var(--primaryColor);
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 26px;
   }
   .lnb .menuBtn{
     display: block;
