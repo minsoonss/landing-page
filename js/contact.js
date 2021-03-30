@@ -42,7 +42,7 @@ $(function(){
     const tel = this.tel.value;
     var question = this.question.value;
     question = question.replace(/(?:\r\n|\r|\n)/g, '%0A');
-    const url = 'https://api.telegram.org/bot1705197010:AAGxvnSa1NkJ23oCNCrhajX3l9HOVbWmjGU/sendMessage?chat_id=-1001470556159&text=';
+    const url = 'https://api.telegram.org/bot1705197010:AAH-lFSv5f38F7Ah0P3vOGm0xxcNMra9Uto/sendMessage?chat_id=-1001470556159&text=';
 
     $.ajax({
       url:`${url}[인스타그램]%0A${account}%0A%0A[연락처]%0A${tel}%0A%0A[문의 내용]%0A${question}%0A%0A[담당자]%0A분배 예정`,
