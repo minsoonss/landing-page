@@ -24,15 +24,15 @@ $(function(){
       $('.kakao').text('카카오톡 상담');
       $('.visual .txtBox').addClass('wow fadeIn');
       $('.smartphone').addClass('wow slideInRight');
-      $('.service .imgBox img:first-child').addClass('wow fadeInUpBig');
-      $('.service .imgBox img:not(:first-child)').addClass('wow fadeIn');
+      $('.service .serviceIntro .imgBox img:first-child').addClass('wow fadeInUpBig');
+      $('.service .serviceIntro .imgBox img:not(:first-child)').addClass('wow fadeIn');
     }else{
       scrollMT = 59;
       $('.kakao').text('바로 상담하기');
       $('.visual .txtBox').removeClass('wow fadeIn');
       $('.smartphone').removeClass('wow slideInRight');
-      $('.service .imgBox img:first-child').removeClass('wow fadeInUpBig');
-      $('.service .imgBox img:not(:first-child)').removeClass('wow fadeIn');
+      $('.service .serviceIntro .imgBox img:first-child').removeClass('wow fadeInUpBig');
+      $('.service .serviceIntro .imgBox img:not(:first-child)').removeClass('wow fadeIn');
     };
     if(windowWidth <= 768 && $(window).scrollTop() > 0){
       $('.kakao').addClass('fixedOn');
