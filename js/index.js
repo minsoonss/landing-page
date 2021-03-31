@@ -76,7 +76,7 @@ $(function(){
     if(scrollNum > 0 && !$('.menuBtn').hasClass('on')){
       $('.kakao').addClass('fixedOn');
       $('.kakao').css({transition: 'all 0.3s ease-out'})
-    }else if(scrollNum == 0 && !$('.menuBtn').hasClass('on')){
+    }else if(scrollNum <= 0 && !$('.menuBtn').hasClass('on')){
       $('.kakao').removeClass('fixedOn');
     };
   });
