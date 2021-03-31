@@ -8,6 +8,7 @@ article{
 .visual{
   overflow: hidden;
   height: calc(100vh - 80px);
+  background-color: #fff;
   background-image: url(../images/visual_background.png);
   -webkit-background-size: cover;
   background-size: cover;
@@ -125,6 +126,7 @@ article{
 .secret{
   overflow: hidden;
   height: calc(100vh - 310px);
+  background-color: #fff;
   text-align: center;
 }
 .secret .inner{
@@ -170,6 +172,7 @@ article{
 /*SERVICE*/
 .service{
   text-align: center;
+  background-color: #fff;
   background-image: url(../images/service_background.png);
   -webkit-background-size: contain;
   background-size: contain;

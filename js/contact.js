@@ -34,7 +34,7 @@ function thanksPopupClose(){
   document.location.reload(true);
 };
 
-let countNum = 3;
+let countNum = 5;
 
 function countDown(){
   countNum--;
