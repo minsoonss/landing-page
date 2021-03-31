@@ -103,10 +103,10 @@ article{
   top: 50%;
   left: 0;
   width: 100%;
-  font-family: 'Malgun Gothic';
+  font-family: 'NanumSquareEB';
   font-size: 48px;
   font-weight: 900;
-  line-height: 40px;
+  line-height: 1;
   letter-spacing: -2px;
   transform: translateY(-50%);
 }
