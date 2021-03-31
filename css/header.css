@@ -78,6 +78,9 @@ h1.logo a{
   header .inner{
     width: 100%;
   }
+  header h2{
+    white-space: nowrap;
+  }
   h1.logo a{
     margin-top: 17px;
     margin-left: 5%;
