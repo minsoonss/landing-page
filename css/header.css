@@ -78,17 +78,27 @@ h1.logo a{
   header .inner{
     width: 100%;
   }
-  header h2{
-    white-space: nowrap;
+  h1.logo a::before{
+    content: '';
+    display: block;
+    float: left;
+    margin-right: 5px;~
+    width: 23px;
+    height: 26px;
+    background-image: url(../images/simbol_mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
   }
   h1.logo a{
     margin-top: 17px;
     margin-left: 5%;
-    padding-left: 28px;
-    background-image: url(../images/simbol_mobile.svg);
+    padding-left: 0;
+    background-image: none;
     color:  var(--primaryColor);
     font-size: 20px;
     line-height: 26px;
+    white-space: nowrap;
   }
   .lnb .menuBtn{
     display: block;
