@@ -112,11 +112,15 @@ footer{
     justify-content: center;
     float: none;
   }
+  .footerTop .footerInfor ul li{
+    margin-right: 15px;
+  }
   .footerTop .footerInfor ul li:last-child{
     margin-right: 0;
   }
   .footerTop .footerInfor ul li::after{
     top: 6px;
+    right: -7.25px;
     height: 12px;
   }
   .footerTop .footerInfor ul li:last-child::after{

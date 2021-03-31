@@ -30,12 +30,13 @@
 
 :root{
   --primaryColor: #5D66F5;
-  --secondaryColor: #000;
+  --secondaryColor: #ffe55c;
   --animate-duration: 1200ms;
 }
-/* ::selection{
-  
-} */
+::selection{
+  background-color: var(--secondaryColor);
+  color: #000;
+}
 
 body{
   background-color: #fff;
@@ -67,6 +68,7 @@ h2 span{
     text-align: center;
   }
   .inner{
+    overflow: auto;
     width: 90%;
   }
   .br{
