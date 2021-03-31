@@ -54,6 +54,7 @@ table{
   -moz-box-sizing: border-box;
 }
 a{
+  outline: none;
   color: inherit;
   text-decoration: none;
 }

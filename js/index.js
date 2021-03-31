@@ -24,11 +24,15 @@ $(function(){
       $('.kakao').text('카카오톡 상담');
       $('.visual .txtBox').addClass('wow fadeIn');
       $('.smartphone').addClass('wow slideInRight');
+      $('.service .imgBox img:first-child').addClass('wow fadeInUpBig');
+      $('.service .imgBox img:not(:first-child)').addClass('wow fadeIn');
     }else{
-      scrollMT = 60;
+      scrollMT = 59;
       $('.kakao').text('바로 상담하기');
       $('.visual .txtBox').removeClass('wow fadeIn');
       $('.smartphone').removeClass('wow slideInRight');
+      $('.service .imgBox img:first-child').removeClass('wow fadeInUpBig');
+      $('.service .imgBox img:not(:first-child)').removeClass('wow fadeIn');
     };
     if(windowWidth <= 768 && $(window).scrollTop() > 0){
       $('.kakao').addClass('fixedOn');
@@ -52,6 +56,11 @@ $(function(){
 
   /*MENU*/
   $('.menu li:not(:last-child) a').click(function(){
+    if(windowWidth <= 768){
+      $('.menuBtn').removeClass('on');
+      $('.menu').hide();
+      $('.bgShadow').hide();
+    }
     const menuMove = $(this).attr('href');
     const scrollValue = $(menuMove).offset().top;
     $scroll.stop().animate({'scrollTop': `${scrollValue - scrollMT}px`}, 1000);
@@ -66,7 +75,7 @@ $(function(){
     };
     if(scrollNum > 0 && !$('.menuBtn').hasClass('on')){
       $('.kakao').addClass('fixedOn');
-      $('.kakao').css({transition: 'all 0.4s ease-in-out'})
+      $('.kakao').css({transition: 'all 0.3s ease-out'})
     }else if(scrollNum == 0 && !$('.menuBtn').hasClass('on')){
       $('.kakao').removeClass('fixedOn');
     };

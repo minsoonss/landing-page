@@ -34,6 +34,13 @@ function thanksPopupClose(){
   document.location.reload(true);
 };
 
+let countNum = 3;
+
+function countDown(){
+  countNum--;
+  countNum == 0 ? document.location.reload(true) : $('.count').text(countNum);
+};
+
 $(function(){
   $('#contactForm').submit(function(e){
     e.preventDefault();
@@ -60,7 +67,9 @@ $(function(){
         console.log('문의가 전송되었습니다.');
       }
     });
-    
+
+    $('.userName').text(account);
     thanksPopupOpen();
+    setInterval(countDown, 1000);
   });
 });

@@ -449,7 +449,7 @@ article{
 @media screen and (max-width: 768px){
   /*ALL*/
   article{
-    scroll-margin-top: 60px;
+    scroll-margin-top: 59px;
   }
 
   /*VISUAL*/
@@ -503,6 +503,9 @@ article{
   .insta .imgBox .graph{
     position: absolute;
     top: -155px;
+  }
+  .insta .imgBox .graph p{
+    top: calc(50% - 24.5px);
   }
 
   /*SECRET*/
