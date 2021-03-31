@@ -268,8 +268,7 @@
 }
 .thanksPopup .content{
   position: relative;
-  margin: 0 auto;
-  margin-top: 50vh;
+  margin: 50vh auto 0;
   color: #fff;
   text-align: center;
   transform: translateY(-50%);
