@@ -45,7 +45,10 @@ $(function(){
   $('#contactForm').submit(function(e){
     e.preventDefault();
     
-    const account = this.account.value;
+    var account = this.account.value;
+    if(account == '없음'){
+      account = '고객'
+    }
     const tel = this.tel.value;
     var question = this.question.value;
     question = question.replace(/(?:\r\n|\r|\n)/g, '%0A');
