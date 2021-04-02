@@ -16,6 +16,7 @@ function menuSlide(){
 $(function(){
   var windowWidth = $(window).width();
   var scrollMT = 80;
+  var scrollNum
 
   /*모바일 초기값*/
   function mobileInit(){
@@ -36,7 +37,6 @@ $(function(){
     };
     if(windowWidth <= 768 && $(window).scrollTop() > 0){
       $('.kakao').addClass('fixedOn');
-      $('.kakao').css({transition: 'none'});
     };
   };
 
@@ -49,13 +49,14 @@ $(function(){
       scrollMT = 80;
       $('.kakao').text('카카오톡 상담');
     }else{
-      scrollMT = 60;
+      scrollMT = 59;
       $('.kakao').text('바로 상담하기');
     };
   });
 
   /*MENU*/
-  $('.menu li:not(:last-child) a').click(function(){
+  $('.menu li:not(:last-child) a').click(function(e){
+    e.preventDefault();
     if(windowWidth <= 768){
       $('.menuBtn').removeClass('on');
       $('.menu').hide();
@@ -68,14 +69,15 @@ $(function(){
   
   /*GRAPH*/
   $(window).scroll(function(){
-    const scrollNum = $(this).scrollTop();
+    console.log($('.kakao').getAttribute('data-animated'))
+    scrollNum = $(this).scrollTop();
     const $circle = $('.insta .imgBox .graph svg circle');
     if(scrollNum >= 500){
       $circle.animate({'stroke-dashoffset': '32.5px'}, 1200);
     };
     if(scrollNum > 0 && !$('.menuBtn').hasClass('on')){
       $('.kakao').addClass('fixedOn');
-      $('.kakao').css({transition: 'all 0.3s ease-out'})
+      $('.kakao').css({'transition': 'all 0.3s ease-out'});
     }else if(scrollNum <= 0 && !$('.menuBtn').hasClass('on')){
       $('.kakao').removeClass('fixedOn');
     };
