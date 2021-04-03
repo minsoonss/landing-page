@@ -29,10 +29,16 @@ $(function(){
   $('#contactForm').submit(function(e){
     e.preventDefault();
     
-    const account = this.account.value;
-    const tel = this.tel.value;
+    var account = this.account.value;
+    account = account.replaceAll('??', '');
+    account = account.replaceAll('&', '/');
+    var tel = this.tel.value;
+    tel = tel.replaceAll('??', '');
+    tel = tel.replaceAll('&', '/');
     var question = this.question.value;
-    question = question.replace(/(?:\r\n|\r|\n)/g, '%0A');
+    question = question.replaceAll(/(?:\r\n|\r|\n)/g, '%0A');
+    question = question.replaceAll('??', '%0A');
+    question = question.replaceAll('&', '/');
     const url = 'https://api.telegram.org/bot1705197010:AAH-lFSv5f38F7Ah0P3vOGm0xxcNMra9Uto/sendMessage?chat_id=-1001470556159&text=';
 
     $.ajax({
