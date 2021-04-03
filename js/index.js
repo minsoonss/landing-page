@@ -2,14 +2,14 @@ const $scroll = $('html, body');
 
 function menuSlide(){
   $('.menuBtn').toggleClass('on');
+  $('.menuBtn').toggleClass('animated');
   $('.menu').toggle();
   $('.bgShadow').toggle();
+  $('.kakao').attr('data-animated', 'false');
   if(!$('.kakao').hasClass('fixedOn')){
     $('.kakao').addClass('fixedOn');
-    $('.kakao').css({transition: 'none'});
   }else if($(window).scrollTop() == 0){
     $('.kakao').removeClass('fixedOn');
-    $('.kakao').css({transition: 'none'});
   };
 };
 
@@ -37,6 +37,8 @@ $(function(){
     };
     if(windowWidth <= 768 && $(window).scrollTop() > 0){
       $('.kakao').addClass('fixedOn');
+    }else if(windowWidth <= 768 && $(window).scrollTop() <= 0){
+      $('.kakao').attr('data-animated', 'true');
     };
   };
 
@@ -61,24 +63,25 @@ $(function(){
       $('.menuBtn').removeClass('on');
       $('.menu').hide();
       $('.bgShadow').hide();
-    }
+    };
     const menuMove = $(this).attr('href');
     const scrollValue = $(menuMove).offset().top;
-    $scroll.stop().animate({'scrollTop': `${scrollValue - scrollMT}px`}, 1000);
+    $scroll.stop().animate({'scrollTop': `${scrollValue - scrollMT}px`}, 1000, function(){
+      $('.menuBtn').removeClass('animated');
+    });
   });
   
   /*GRAPH*/
   $(window).scroll(function(){
-    console.log($('.kakao').getAttribute('data-animated'))
+    $('.kakao').attr('data-animated', 'true');
     scrollNum = $(this).scrollTop();
     const $circle = $('.insta .imgBox .graph svg circle');
     if(scrollNum >= 500){
       $circle.animate({'stroke-dashoffset': '32.5px'}, 1200);
     };
-    if(scrollNum > 0 && !$('.menuBtn').hasClass('on')){
+    if(scrollNum > 0 && !$('.menuBtn').hasClass('animated')){
       $('.kakao').addClass('fixedOn');
-      $('.kakao').css({'transition': 'all 0.3s ease-out'});
-    }else if(scrollNum <= 0 && !$('.menuBtn').hasClass('on')){
+    }else if(scrollNum <= 0 && !$('.menuBtn').hasClass('animated')){
       $('.kakao').removeClass('fixedOn');
     };
   });

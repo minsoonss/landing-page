@@ -174,17 +174,6 @@
   opacity: 1;
   background-color: #999;
 }
-.container form .btnBox .warning{
-  display: none;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  color: #FF4040;
-}
-.container form .btnBox .inquiryBtn:enabled:hover + .warning{
-  display: block;
-}
 
 /*privacyPopup*/
 .privacyPopup{
@@ -254,39 +243,6 @@
   color: #fff;
   font-family: 'NanumSquareB';
   font-size: 20px;
-}
-
-/*thanksPopup*/
-.thanksPopup{
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(43, 43, 43, 0.9);
-}
-.thanksPopup .content{
-  position: relative;
-  margin: 50vh auto 0;
-  color: #fff;
-  text-align: center;
-  transform: translateY(-50%);
-}
-.thanksPopup h3{
-  font-family: 'NanumSquareEB';
-  font-size: 50px;
-  line-height: 1.3;
-}
-.thanksPopup h3 span{
-  color: var(--secondaryColor);
-}
-.thanksPopup p{
-  margin-top: 20px;
-  color: #aaa;
-  font-size: 20px;
-  line-height: 1.3;
 }
 
 /* 모바일 세팅 */
@@ -390,9 +346,6 @@
     width: 100%;
     font-size: 18px;
   }
-  .container form .btnBox .inquiryBtn:enabled:hover + .warning{
-    display: none;
-  }
 
   /*privacyPopup*/
   .privacyPopup .content{
@@ -410,15 +363,5 @@
   .privacyPopup .content .contentBtm .checkBtn{
     width: 100%;
     font-size: 18px;
-  }
-
-  /*thanksPopup*/
-  .thanksPopup h3{
-    font-size: 28px;
-  }
-  .thanksPopup p{
-    margin-top: 10px;
-    font-size: 14px;
-    line-height: 1.4;
   }
 }
