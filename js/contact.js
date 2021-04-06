@@ -39,7 +39,7 @@ $(function(){
     question = question.replaceAll(/(?:\r\n|\r|\n)/g, '%0A');
     question = question.replaceAll('??', '%0A');
     question = question.replaceAll('&', '/');
-    const url = 'https://api.telegram.org/bot1705197010:AAH-lFSv5f38F7Ah0P3vOGm0xxcNMra9Uto/sendMessage?chat_id=-1001470556159&text=';
+    const url = 'https://api.telegram.org/bot1705197010:AAH0cbhhcr9ov0Ddp8Hx-TYYWARZJHY-rTQ/sendMessage?chat_id=-1001470556159&text=';
 
     $.ajax({
       url:`${url}[인스타그램]%0A${account}%0A%0A[연락처]%0A${tel}%0A%0A[문의 내용]%0A${question}%0A%0A[담당자]%0A분배 예정`,
