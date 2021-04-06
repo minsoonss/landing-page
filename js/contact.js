@@ -54,7 +54,7 @@ $(function(){
         console.log('문의 전송에 실패했습니다.');
       },
       success: function(result){
-        window.location.replace('./thankyou.html');
+        document.location.replace('./thankyou.html');
       }
     });
   });
