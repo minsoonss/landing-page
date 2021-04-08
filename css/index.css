@@ -363,7 +363,7 @@ article{
   height: 100%;
 }
 .faq .swiper-container .swiper-wrapper .swiper-slide h3{
-  margin-top: 145px;
+  margin-top: 135px;
   font-family: 'NanumSquareB';
   font-size: 32px;
 }
@@ -371,9 +371,6 @@ article{
   margin-top: 15px;
   font-size: 18px;
   line-height: 1.4;
-}
-.faq .swiper-container .swiper-wrapper .swiper-slide:not(:first-child) h3{
-  margin-top: 135px;
 }
 .faq .swiper-container .swiper-button-next,
 .faq .swiper-container .swiper-button-prev{
@@ -713,9 +710,6 @@ article{
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.4;
-  }
-  .faq .swiper-container .swiper-wrapper .swiper-slide:not(:first-child) h3{
-    margin-top: 140px;
   }
   .faq .swiper-container .swiper-button-next,
   .faq .swiper-container .swiper-button-prev{
