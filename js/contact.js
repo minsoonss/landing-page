@@ -1,61 +1,74 @@
-function menuSlide(){
+function menuSlide() {
   $('.menuBtn').toggleClass('on');
   $('.menu').toggle();
   $('.bgShadow').toggle();
 };
 
-function privacyPopupOpen(){
-  if(!$('.privacyBox label').hasClass('on')){
+function privacyPopupOpen() {
+  if (!$('.privacyBox label').hasClass('on')) {
     $('.privacyBox label').addClass('on');
     $('.privacyPopup').show();
-  }else{
+  } else {
     $('.privacyBox label').removeClass('on');
   };
 };
 
-function privacyPopupClose(){
+function privacyPopupClose() {
   $('.privacyPopup').hide();
 };
 
-function assentCheck(){
-  if($('.privacyBox input').is(':checked')){
+function assentCheck() {
+  if ($('.privacyBox input').is(':checked')) {
     $('.inquiryBtn').removeAttr('disabled');
-  }else{
+  } else {
     $('.inquiryBtn').attr('disabled', '');
   };
 };
 
-$(function(){
-  $('#contactForm').submit(function(e){
+$(function () {
+  $('#contactForm').submit(function (e) {
     e.preventDefault();
-    
-    var account = this.account.value;
-    account = account.replaceAll('??', '');
-    account = account.replaceAll('&', '/');
-    var tel = this.tel.value;
-    tel = tel.replaceAll('??', '');
-    tel = tel.replaceAll('&', '/');
-    var question = this.question.value;
-    question = question.replaceAll(/(?:\r\n|\r|\n)/g, '%0A');
-    question = question.replaceAll('??', '%0A');
-    question = question.replaceAll('&', '/');
-    const url = 'https://api.telegram.org/bot1705197010:AAH0cbhhcr9ov0Ddp8Hx-TYYWARZJHY-rTQ/sendMessage?chat_id=-1001470556159&text=';
 
-    $.ajax({
-      url:`${url}[인스타그램]%0A${account}%0A%0A[연락처]%0A${tel}%0A%0A[문의 내용]%0A${question}%0A%0A[담당자]%0A분배 예정`,
-      type: "get",
-      data: {
-        account: account,
-        tel: tel,
-        question: question,
+    var account = this.account.value;
+    var tel = this.tel.value;
+    var question = this.question.value;
+
+    const url = 'https://api.telegram.org/bot1759168713:AAER07C-Yr5UiJhKSJlIWjkKjbC4fCUCcXg/sendMessage';
+    var message = `[인스타그램]\n${account}\n\n[연락처]\n${tel}\n\n[문의 내용]\n${question}\n\n[담당자]\n분배 예정`;
+    var chat_id = -582605434
+
+    // $.ajax({
+    //   url:`${url}[인스타그램]%0A${account}%0A%0A[연락처]%0A${tel}%0A%0A[문의 내용]%0A${question}%0A%0A[담당자]]%0A분배 예정`,
+    //   type: "get",
+    //   data: {
+    //     account: account,
+    //     tel: tel,
+    //     question: question,
+    //   },
+    //   dataType: "json",
+    //   error: function(err){
+    //     console.log('문의 전송에 실패했습니다.');
+    //   },
+    //   success: function(result){
+    //     location.assign(location.origin + "/thankyou.html");
+    //   }
+    // });
+
+    var settings = {
+      "url": "https://api.telegram.org/bot1759168713:AAER07C-Yr5UiJhKSJlIWjkKjbC4fCUCcXg/sendMessage",
+      "method": "POST",
+      "timeout": 0,
+      "headers": {
+        "Content-Type": "application/json"
       },
-      dataType: "json",
-      error: function(err){
-        console.log('문의 전송에 실패했습니다.');
-      },
-      success: function(result){
-        location.assign(location.origin + "/thankyou.html");
-      }
+      "data": JSON.stringify({
+        "chat_id": -1001316142800,
+        "text": message
+      }),
+    };
+
+    $.ajax(settings).done(function (response) {
+      location.assign(location.origin + "/thankyou.html");
     });
   });
 });
