@@ -33,7 +33,7 @@ $(function () {
     var tel = this.tel.value;
     var question = this.question.value;
 
-    const url = 'https://api.telegram.org/bot1759168713:AAER07C-Yr5UiJhKSJlIWjkKjbC4fCUCcXg/sendMessage';
+    //const url = 'https://api.telegram.org/bot1759168713:AAEc6TsNj1WCPiVrOsQ2aj_VgKHN47QZMA8/sendMessage';
     var message = `[인스타그램]\n${account}\n\n[연락처]\n${tel}\n\n[문의 내용]\n${question}\n\n[담당자]\n분배 예정`;
     var chat_id = -582605434
 
@@ -55,7 +55,7 @@ $(function () {
     // });
 
     var settings = {
-      "url": "https://api.telegram.org/bot1759168713:AAER07C-Yr5UiJhKSJlIWjkKjbC4fCUCcXg/sendMessage",
+      "url": "https://api.telegram.org/bot1759168713:AAEc6TsNj1WCPiVrOsQ2aj_VgKHN47QZMA8/sendMessage",
       "method": "POST",
       "timeout": 0,
       "headers": {
