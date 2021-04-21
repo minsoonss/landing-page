@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <!-- UPDATE 210421.01 11:17 -->
+  <!-- UPDATE 210421.02 23:13 -->
   <!-- anti-flicker snippet (recommended)  -->
   <style>.async-hide { opacity: 0 !important} </style>
   <script>
@@ -21,18 +21,6 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-170296878-1', { 'optimize_id': 'OPT-TR429QM'});
-    function gaTest() {
-      try {
-        var trackers = ga.getAll();
-        var i, len;
-        for (i = 0, len = trackers.length; i < len; i += 1) {
-          if (trackers[i].get('trackingId') === "UA-170296878-1") {
-            return trackers[i].get('clientId');
-          }
-        }
-      } catch(e) {}  
-      return 'false';
-    }
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T076CG0WFB"></script>
