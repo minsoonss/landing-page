@@ -45,9 +45,7 @@ article{
   letter-spacing: 0;
 }
 .visual .txtBox .quick:hover{
-  background-color: var(--secondaryColor);
-  color: #371C01;
-  font-family: 'NanumSquareB';
+  background-color: #353ec0;
 }
 .visual .imgBox{
   overflow: hidden;
