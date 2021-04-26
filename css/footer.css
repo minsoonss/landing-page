@@ -28,9 +28,6 @@ footer{
   font-family: 'NanumSquareB';
   font-size: 32px;
 }
-.footerTop .footerLink a:hover{
-  color: #FFBC66;
-}
 .footerTop .footerInfor{
   float: right;
 }

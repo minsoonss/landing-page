@@ -44,9 +44,6 @@ article{
   line-height: 50px;
   letter-spacing: 0;
 }
-.visual .txtBox .quick:hover{
-  background-color: #353ec0;
-}
 .visual .imgBox{
   overflow: hidden;
   position: absolute;
