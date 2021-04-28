@@ -55,7 +55,7 @@ $(function () {
     // });
 
     var settings = {
-      "url": "https://api.telegram.org/bot1759168713:AAEc6TsNj1WCPiVrOsQ2aj_VgKHN47QZMA8/sendMessage",
+      "url": "https://api.telegram.org/bot1759168713:AAHfg00ETjpbDMrzXcd5H_vtIBOZmBLBXkw/sendMessage",
       "method": "POST",
       "timeout": 0,
       "headers": {
