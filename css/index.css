@@ -417,53 +417,314 @@ article{
 
 /*CONTACT*/
 .contact{
-  height: 700px;
-  background-image: url(../images/contact_background.jpg);
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: calc(100vh - 80px);
+  text-align: center;
 }
 .contact .txtBox{
-  margin-top: 235px;
-  color: #fff;
-}
-.contact .txtBox h2{
-  font-family: 'NanumSquareB';
-  font-size: 36px;
-  line-height: 1.2;
-}
-.contact .txtBox h2 span{
-  color: #FFBC66;
-  font-family: 'NanumSquareEB';
+  margin-top: 100px;
 }
 .contact .txtBox p{
-  margin-top: 20px;
-  color: #d5d5d5;
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 20px;
 }
-.contact .txtBox .linkBox{
-  margin-top: 50px;
+.contact .txtBox h2{
+  margin-top: 10px;
+  color: var(--primaryColor);
+  font-size: 44px;
 }
-.contact .txtBox .linkBox a{
-  display: inline-block;
-  padding-right: 18px;
-  background-image: url(../images/contact_icon.svg);
-  background-repeat: no-repeat;
-  background-position: right center;
+.contact .expBox{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+  background-color: #fff;
+}
+.contact .expBox li{
+  padding: 40px 0;
+  width: 300px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2.5px 10px rgba(0, 0, 0, 0.1);
+}
+.contact .expBox li h3{
   font-family: 'NanumSquareB';
+  font-size: 20px;
+  line-height: 1.3;
+}
+.contact .expBox li img{
+  margin: 20px 0 25px;
+  width: 150px;
+}
+.contact .expBox li .expBtn{
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+  height: 50px;
+  background-color: var(--primaryColor);
+  color: #fff;
+  font-family: 'NanumSquareB';
+  font-size: 20px;
+}
+.contact .guide{
+  margin: 60px 0 100px;
+  color: #aaa;
   font-size: 18px;
-  line-height: 20px;
-}
-.contact .txtBox .linkBox a:first-child{
-  margin-right: 20px;
-}
-.contact .txtBox .linkBox a:hover{
-  background-image: url(../images/contact_icon_hover.svg);
-  color: #FFBC66;
 }
 
+/* CONTACT POPUP */
+.contactPopup{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+}
+.contactPopup .bg{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(43, 43, 43, 0.9);
+}
+.formBox{
+  position: absolute;
+  top: calc(50vh - 372.5px);
+  left: calc(50% - 275px);
+  width: 550px;
+  height: 750px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.formBox .titleBox{
+  margin-bottom: 50px;
+  height: 60px;
+  border-bottom: 1px solid #DEE2E6;
+  line-height: 60px;
+}
+.formBox .titleBox h3{
+  float: left;
+  margin-left: 20px;
+  font-family: 'NanumSquareB';
+  font-size: 20px;
+}
+.formBox .titleBox .closeBtn{
+  overflow: hidden;
+  float: right;
+  margin-right: 5px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/icon_close.svg);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  font-size: 30px;
+  text-indent: -999em;
+}
+.formBox .txtBox{
+  text-align: center;
+}
+.formBox .txtBox p{
+  font-size: 18px;
+  line-height: 1.5;
+}
+.formBox .txtBox p .user_choose{
+  font-family: 'NanumSquareB';
+}
+.formBox form{
+  overflow: hidden;
+  margin: 50px auto 0;
+  width: 85%;
+}
+.formBox form .accountBox,
+.formBox form .telBox{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.formBox form .accountBox label,
+.formBox form .telBox label,
+.formBox form .questionBox label{
+  display: block;
+  padding-left: 0;
+  font-size: 14px;
+  line-height: 30px;
+}
+.formBox form .accountBox label span,
+.formBox form .telBox label span{
+  color: #FF4040;
+}
+.formBox form .accountBox input,
+.formBox form .telBox input{
+  padding: 0 10px;
+  width: 100%;
+  height: 48px;
+  outline: none;
+  border: 1px solid #DEE2E6;
+  color: #000;
+  font-family: 'NanumSquare';
+  font-size: 16px;
+  line-height: 48px;
+}
+::-webkit-input-placeholder{
+  color: #ccc;
+  line-height: 48px;
+}
+:-moz-placeholder{
+  color: #ccc;
+  line-height: 48px;
+}
+::-moz-placeholder{
+  color: #ccc;
+  line-height: 48px;
+}
+:-ms-input-placeholder{
+  color: #ccc;
+  line-height: 48px;
+}
+.formBox form .questionBox{
+  width: 100%;
+}
+.formBox form .questionBox textarea{
+  display: block;
+  padding: 15px 10px;
+  width: 100%;
+  height: 150px;
+  white-space: pre-wrap;
+  outline: none;
+  border: 1px solid #DEE2E6;
+  resize: none;
+  color: #000;
+  font-family: 'NanumSquare';
+  font-size: 16px;
+  line-height: 1.1;
+}
+.formBox form .questionBox textarea::-webkit-input-placeholder{
+  line-height: 1.1;
+}
+.formBox form .questionBox textarea:-moz-placeholder{
+  line-height: 1.1;
+}
+.formBox form .questionBox textarea::-moz-placeholder{
+  line-height: 1.1;
+}
+.formBox form .questionBox textarea:-ms-input-placeholder{
+  line-height: 1.1;
+}
+.formBox form .privacyBox{
+  display: block;
+  float: left;
+  margin: 20px 0 0;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+}
+.formBox form .privacyBox label{
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+}
+.formBox form .privacyBox label::before{
+  content: '';
+  display: inline-block;
+  float: left;
+  margin: 2px 5px 0 0;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icon_check.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+.formBox form .privacyBox label:hover::before{
+  background-position: -16px 0;
+}
+.formBox form .privacyBox label.on::before{
+  background-position: -32px 0;
+}
+.formBox form .privacyBox label.on:hover::before{
+  background-position: -48px 0;
+}
+.formBox form .privacyBox label input{
+  display: none;
+}
+.formBox form .privacyBox label a{
+  color: #888;
+  text-decoration: underline;
+}
+.formBox form .btnBox{
+  position: relative;
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+.formBox form .btnBox .inquiryBtn{
+  opacity: 0.9;
+  width: 100%;
+  height: 50px;
+  background-color: var(--primaryColor);
+  color: #fff;
+  font-family: 'NanumSquareB';
+  font-size: 20px;
+}
+.formBox form .btnBox .inquiryBtn:hover{
+  opacity: 1;
+}
+.formBox form .btnBox .inquiryBtn:disabled{
+  cursor: no-drop;
+  opacity: 1;
+  background-color: #999;
+}
+
+/*privacyPopup*/
+.privacyPopup{
+  display: none;
+  position: absolute;
+  top: calc(50vh - 372.5px);
+  left: calc(50% - 275px);
+  width: 550px;
+  height: 750px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.privacyPopup .titleBox{
+  height: 60px;
+  border-bottom: 1px solid #DEE2E6;
+  line-height: 60px;
+}
+.privacyPopup .titleBox h3{
+  float: left;
+  margin-left: 20px;
+  font-family: 'NanumSquareB';
+  font-size: 20px;
+}
+.privacyPopup .titleBox .closeBtn{
+  overflow: hidden;
+  float: right;
+  margin-right: 5px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/icon_close.svg);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  font-size: 30px;
+  text-indent: -999em;
+}
+.privacyPopup .content{
+  padding: 40px;
+  height: 690px;
+  text-align: center;
+}
+.privacyPopup .content p{
+  overflow-y: scroll;
+  height: 610px;
+  font-size: 14px;
+  text-align: justify;
+  line-height: 1.4;
+  white-space: normal;
+}
+.privacyPopup .content p::-webkit-scrollbar{
+  display: none;
+}
 
 /* 모바일 세팅 */
 @media screen and (max-width: 768px){
@@ -754,23 +1015,102 @@ article{
   .contact .txtBox{
     margin-top: 0;
   }
-  .contact .txtBox h2{
-    font-size: 28px;
+  .contact .txtBox p{
+    font-size: 16px;
     line-height: 1.3;
   }
-  .contact .txtBox p{
-    margin-top: 10px;
-    font-size: 14px;
+  .contact .txtBox h2{
+    margin-top: 0;
+    font-size: 28px;
     line-height: 1.5;
   }
-  .contact .txtBox .linkBox{
+  .contact .expBox{
+    display: block;
     margin-top: 50px;
   }
-  .contact .txtBox .linkBox a{
-    font-size: 16px;
-    line-height: 18px;
+  .contact .expBox li{
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 30px 0;
+    width: 70%;
   }
-  .contact .txtBox .linkBox a:first-child{
-    margin-right: 20px;
+  .contact .expBox li h3{
+    font-family: 'NanumSquareB';
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .contact .expBox li img{
+    width: 120px;
+  }
+  .contact .expBox li .expBtn{
+    width: 80%;
+  }
+  .contact .guide{
+    margin: 0;
+    font-size: 14px;
+  }
+
+  /* CONTACT POPUP */
+  .contactPopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+  }
+  .contactPopup .bg{
+    display: none;
+  }
+  .formBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .formBox .titleBox{
+    margin-bottom: 80px;
+  }
+  .formBox form{
+    text-align: left;
+  }
+  .formBox form .btnBox{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    float: none;
+    margin-top: 0;
+  }
+  .formBox form .btnBox .inquiryBtn{
+    opacity: 1;
+    height: 60px;
+  }
+
+  /*privacyPopup*/
+  .privacyPopup{
+    top: 20vh;
+    left: 7.5%;
+    width: 85%;
+    height: 60vh;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 25vh rgba(43, 43, 43, 0.9);
+  }
+  .privacyPopup .titleBox{
+    height: 60px;
+    border-bottom: 1px solid #DEE2E6;
+    line-height: 60px;
+  }
+  .privacyPopup .content{
+    padding: 20px;
+    height: calc(60vh - 60px);
+  }
+  .privacyPopup .content p{
+    height: 100%;
+    font-size: 12px;
   }
 }

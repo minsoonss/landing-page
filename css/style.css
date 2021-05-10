@@ -33,10 +33,10 @@
   --secondaryColor: #ffe55c;
   --animate-duration: 1200ms;
 }
-::selection{
+/* ::selection{
   background-color: var(--secondaryColor);
   color: #000;
-}
+} */
 
 body{
   color: #000;

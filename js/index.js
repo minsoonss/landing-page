@@ -13,6 +13,29 @@ function menuSlide(){
   };
 };
 
+function contactPopupClose(){
+  $('.contactPopup').hide();
+  $('#account').val('');
+  $('#tel').val('');
+  $('#question').val('');
+};
+
+function privacyCheck(){
+  !$('.privacyBox label').hasClass('on') ? $('.privacyBox label').addClass('on') : $('.privacyBox label').removeClass('on');
+};
+
+function privacyPopupClose() {
+  $('.privacyPopup').hide();
+};
+
+function assentCheck(){
+  if ($('.privacyBox input').is(':checked')) {
+    $('.inquiryBtn').removeAttr('disabled');
+  } else {
+    $('.inquiryBtn').attr('disabled', '');
+  };
+};
+
 $(function(){
   var windowWidth = $(window).width();
   var scrollMT = 80;
@@ -57,7 +80,7 @@ $(function(){
   });
 
   /*MENU*/
-  $('.menu li:not(:last-child) a').click(function(e){
+  $('.menu li a').click(function(e){
     e.preventDefault();
     if(windowWidth <= 768){
       $('.menuBtn').removeClass('on');
@@ -98,7 +121,62 @@ $(function(){
     },
     loop: true,
   });
+
+  /*CONTACT*/
+  var expService;
+
+  $('.expBtn').click(function(){
+    $('.contactPopup').show();
+    expService = $(this).data('exp');
+    $('.user_choose').text(expService);
+
+    return expService = $(this).data('exp');
+  });
+
+  $('.privacyPopupOpen').click(function(e){
+    e.preventDefault();
+    $('.privacyPopup').show();
+  });
+
+  $('.contactPopup .bg').click(function(){
+    if($('.privacyPopup').is(':visible')){
+      $('.privacyPopup').hide();
+    }else{
+      $('.contactPopup').hide();
+      $('#account').val('');
+      $('#tel').val('');
+      $('#question').val('');
+    };
+  });
   
+  $('#contactForm').submit(function(e){
+    e.preventDefault();
+
+    var account = this.account.value;
+    var tel = this.tel.value;
+    var question = this.question.value;
+    
+    var message = `[체험 서비스]\n${expService}\n\n[인스타그램]\n${account}\n\n[연락처]\n${tel}\n\n[문의 내용]\n${question}\n\n[담당자]\n분배 예정`;
+    var chat_id = -582605434
+    
+    var settings = {
+      "url": "https://api.telegram.org/bot1759168713:AAFUFoh_UBj31iug02djJxwlq-JSK5cDpWg/sendMessage",
+      "method": "POST",
+      "timeout": 0,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "data": JSON.stringify({
+        "chat_id": -1001316142800,
+        "text": message
+      }),
+    };
+
+    $.ajax(settings).done(function (response) {
+      location.assign(location.origin + "/thankyou.html");
+    });
+  });
+
   /*WOW MASTER*/
   new WOW().init();
 });
